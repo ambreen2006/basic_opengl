@@ -20,9 +20,17 @@ const void
 BasicWindow::showWindow()
 {
     this->gWindow = glfwCreateWindow(this->gWidth, this->gHeight, this->gTitle.c_str(), NULL, NULL);
+
+    if( !this->gWindow )
+    {
+    	glfwTerminate();
+    	return;
+    }
+
     glfwMakeContextCurrent(this->gWindow);
     while (!glfwWindowShouldClose(this->gWindow))
     {
+    	glfwSwapBuffers(this->gWindow);
         glfwPollEvents();
     }
 
