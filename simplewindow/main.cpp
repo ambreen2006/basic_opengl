@@ -1,5 +1,9 @@
 #include <basic_window.h>
+#include <cstdlib>
+
+#ifdef __APPLE__
 #include <CoreFoundation/CoreFoundation.h>
+#endif
 
 int main(int argc, char** argv)
 {

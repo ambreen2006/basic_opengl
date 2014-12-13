@@ -1,3 +1,5 @@
+addflags()
+
 add_executable(simple_window main.cpp
                              basic_window.cpp)
 
